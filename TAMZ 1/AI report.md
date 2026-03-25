@@ -15,3 +15,13 @@ in python how can I generate a UUID?
 
 
 ## Co AI vygenerovala správně?
+Pro první příklad našel v kódu chybu, omylem jsme napsali "" do [] při prohledávání prvků v metadata
+```Chyba je v tom, že metadata (načtená z JSONu) je dictionary (slovník). Když napíšeš for file in metadata:, Python prochází jen klíče (což jsou textové řetězce, tedy tvoje ID souborů), nikoliv samotné objekty. Proto se snažíš z textu číst pomocí ["id"], což vyhodí chybu.```
+
+A pro druhý příklad vygeneroval rozumnou funkci pro generování UUID:
+```
+import uuid
+
+#Generate a random UUID
+my_uuid = uuid.uuid4()
+```
