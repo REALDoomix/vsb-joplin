@@ -24,4 +24,9 @@ import uuid
 
 #Generate a random UUID
 my_uuid = uuid.uuid4()
-```
+``````
+
+
+## Jaké chyby AI udělalo?
+
+Zatím nic.
